@@ -1,0 +1,133 @@
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  width: 80% !important; /* Ensures the slide takes up 80% of the container width */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.swiper-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.swiper-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.dual-slider-container {
+  position: relative;
+  width: 100%;
+  /* max-width: 923px; */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.dual-swiper {
+  overflow: visible;
+}
+
+.dual-slide {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.slide-link {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 15px !important;
+  height: 15px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+  /* right: 50px; */
+}
+
+.nav-button:hover {
+  background-color: white;
+}
+
+.prev {
+  left: 0.5rem;
+}
+
+.next {
+  right: -0.5rem;
+}
+
+.nav-icon {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.dual-swiper,
+.dual-slide,
+.dual-slide img {
+  border-radius: 16px;
+}
+
+
+@media (min-width: 623px) {
+  .dual-slider-container {
+    padding: 0 1.5rem;
+  }
+
+  .dual-swiper,
+  .dual-slide,
+  .dual-slide img {
+    border-radius: 35px;
+  }
+
+  .dual-swiper {
+    overflow: visible;
+  }
+
+  .dual-slide {
+    width: 75%;
+  }
+
+  .dual-slide + .dual-slide {
+    width: 25%;
+  }
+
+  .nav-button {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 12px !important;
+  }
+
+  .prev {
+    left: 0.1rem;
+  }
+
+  .next {
+    right: 0.1rem;
+  }
+
+  .nav-icon {
+    width: 10px !important;
+    height: 10px !important;
+  }
+ 
+}
